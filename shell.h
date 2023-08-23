@@ -144,7 +144,7 @@ void prints_input_string(char *);
 int _putchar(char);
 
 /* toem_exits.c */
-char *copy_string(char *, char *, int);
+char *copy_str(char *, char *, int);
 char *concat_string(char *, char *, int);
 char *find_char_in_string(char *, char);
 

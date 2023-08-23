@@ -90,7 +90,7 @@ int substitue_alias(info_t *info)
 		p = find_char_in_string(node->str, '=');
 		if (!p)
 			return (0);
-		p = _strdup(p + 1);
+		p = duplicate_string(p + 1);
 		if (!p)
 			return (0);
 		info->argv[0] = p;
