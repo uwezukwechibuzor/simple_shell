@@ -1,5 +1,5 @@
-shell 
-flow chart 
+shell
+flow chart
 simple_shell
 
 ALX Simple Shell Team Project

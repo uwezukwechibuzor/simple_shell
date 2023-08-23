@@ -65,8 +65,7 @@ char *concat_string(char *dest, char *src, int n)
  */
 char *find_char_in_string(char *s, char c)
 {
-	do
-	{
+	do {
 		if (*s == c)
 			return (s);
 	} while (*s++ != '\0');

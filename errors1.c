@@ -110,8 +110,7 @@ char *convert_number_(long int num, int base, int flags)
 	ptr = &buffer[49];
 	*ptr = '\0';
 
-	do
-	{
+	do {
 		*--ptr = array[n % base];
 		n /= base;
 	} while (n != 0);
@@ -138,4 +137,3 @@ void delete_comments(char *buf)
 			break;
 		}
 }
-
