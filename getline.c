@@ -144,7 +144,7 @@ int _get_next_line(info_t *info, char **ptr, size_t *length)
 	if (s)
 		concat_string(new_p, buf + i, k - i);
 	else
-		copy_string(new_p, buf + i, k - i + 1);
+		copy_str(new_p, buf + i, k - i + 1);
 
 	s += k - i;
 	i = k;

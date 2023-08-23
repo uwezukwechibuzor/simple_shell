@@ -7,7 +7,7 @@
  *@n: the amount of characters to be copied
  *Return: the concatenated string
  */
-char *copy_string(char *dest, char *src, int n)
+char *copy_str(char *dest, char *src, int n)
 {
 	int i, j;
 	char *s = dest;

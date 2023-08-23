@@ -90,7 +90,7 @@ int substitue_alias(info_t *info)
 		p = find_char_in_string(node->str, '=');
 		if (!p)
 			return (0);
-		p = _strdup(p + 1);
+		p = duplicate_string(p + 1);
 		if (!p)
 			return (0);
 		info->argv[0] = p;
@@ -116,24 +116,24 @@ int get_new_vars(info_t *info)
 
 		if (!_compare_strang(info->argv[i], "$?"))
 		{
-			replace_string(&(info->argv[i]),
+			change_string(&(info->argv[i]),
 						   duplicate_string(convert_number_(info->status, 10, 0)));
 			continue;
 		}
 		if (!_compare_strang(info->argv[i], "$$"))
 		{
-			replace_string(&(info->argv[i]),
+			change_string(&(info->argv[i]),
 						   duplicate_string(convert_number_(getpid(), 10, 0)));
 			continue;
 		}
 		node = node_starts_with_prefix(info->env, &info->argv[i][1], '=');
 		if (node)
 		{
-			replace_string(&(info->argv[i]),
+			change_string(&(info->argv[i]),
 						   duplicate_string(find_char_in_string(node->str, '=') + 1));
 			continue;
 		}
-		replace_string(&info->argv[i], duplicate_string(""));
+		change_string(&info->argv[i], duplicate_string(""));
 	}
 	return (0);
 }
